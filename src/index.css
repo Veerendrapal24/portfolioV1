@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --color-clay-bg: #f0f4f8;
+  --color-clay-blue: #a5d8ff;
+  --color-clay-pink: #ffc9c9;
+  --color-clay-green: #b2f2bb;
+  --color-clay-yellow: #ffec99;
+  --color-clay-purple: #d0bfff;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-clay-bg text-slate-800 font-sans selection:bg-clay-blue selection:text-white;
+    cursor: default;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-extrabold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .clay-card {
+    @apply bg-white rounded-[40px] transition-all duration-300;
+    box-shadow: 
+      20px 20px 60px #d1d9e6,
+      -20px -20px 60px #ffffff,
+      inset 10px 10px 20px rgba(255, 255, 255, 0.5),
+      inset -10px -10px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  .clay-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+      25px 25px 70px #c2ccd9,
+      -25px -25px 70px #ffffff,
+      inset 15px 15px 25px rgba(255, 255, 255, 0.6),
+      inset -15px -15px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  .clay-button {
+    @apply px-8 py-4 rounded-[30px] font-bold transition-all duration-200 active:scale-95;
+    box-shadow: 
+      8px 8px 16px rgba(0, 0, 0, 0.1),
+      -8px -8px 16px rgba(255, 255, 255, 0.8),
+      inset 4px 4px 8px rgba(255, 255, 255, 0.3),
+      inset -4px -4px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .clay-inset {
+    box-shadow: 
+      inset 6px 6px 12px rgba(0, 0, 0, 0.05),
+      inset -6px -6px 12px rgba(255, 255, 255, 0.8);
+  }
+
+  .clay-blue { @apply bg-clay-blue; }
+  .clay-pink { @apply bg-clay-pink; }
+  .clay-green { @apply bg-clay-green; }
+  .clay-yellow { @apply bg-clay-yellow; }
+  .clay-purple { @apply bg-clay-purple; }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-clay-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 10px;
+  border: 3px solid var(--color-clay-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+

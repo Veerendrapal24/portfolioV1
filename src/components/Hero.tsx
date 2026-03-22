@@ -74,8 +74,8 @@ export default function Hero() {
           className="max-w-xl mt-8"
         >
           <p className="text-xl md:text-2xl font-medium text-slate-500 leading-relaxed">
-            Systems Architect & Full Stack Developer. 
-            Focused on building <span className="text-slate-800">high-performance</span> digital infrastructure with a soft touch.
+            Machine Learning Engineer & AI Specialist. 
+            Building <span className="text-slate-800">data-driven systems</span> that learn, adapt, and scale efficiently.
           </p>
           
           <div className="flex flex-wrap gap-4 mt-10">

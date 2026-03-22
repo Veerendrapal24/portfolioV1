@@ -16,8 +16,15 @@ export default function About() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="clay-card clay-pink p-12 sticky top-32"
+            className="clay-card clay-pink p-10 md:p-12 sticky top-32 overflow-hidden"
           >
+            <div className="relative mb-8 aspect-square rounded-[40px] overflow-hidden clay-inset bg-white/50 p-2">
+              <img 
+                src="/palpic.jpeg" 
+                alt="Annoula Veerendra Pal" 
+                className="w-full h-full object-cover rounded-[35px] grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
+              />
+            </div>
             <motion.span 
               initial={{ scale: 3, y: -20, opacity: 0 }}
               whileInView={{ scale: 1, y: 0, opacity: 1 }}

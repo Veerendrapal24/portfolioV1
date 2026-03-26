@@ -86,8 +86,8 @@ export default function CustomCursor() {
       style={{
         x: cursorX,
         y: cursorY,
-        translateX: '-50%',
-        translateY: '-50%',
+        left: -16,
+        top: -16,
         opacity: isVisible ? 1 : 0,
       }}
       animate={{

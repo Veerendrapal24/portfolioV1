@@ -12,7 +12,7 @@ const education = [
     period: "Aug' 23 – Present",
     color: 'clay-blue',
     details: [
-      'Maintaining a CGPA of 8.07.',
+      'Maintaining a CGPA of 8.37.',
       'Focusing on Systems Programming, DSA, and AI Foundations.',
       'Active participation in technical workshops and hackathons.'
     ]

@@ -81,73 +81,76 @@ export default function App() {
       
       <AnimatePresence>
         {!isLoading && (
-          <motion.div
-            initial={{ opacity: 0, y: 100, filter: 'blur(20px)' }}
-            animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-            transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1] }}
-          >
-            <motion.div
-              className="fixed top-0 left-0 right-0 h-1.5 bg-clay-blue z-[100] origin-left"
-              style={{ scaleX }}
-            />
+          <>
             <CustomCursor />
-            <Background />
             <Navbar />
             
-            <main>
-              <div id="hero">
-                <Hero />
-              </div>
+            <motion.div
+              initial={{ opacity: 0, y: 100, filter: 'blur(20px)' }}
+              animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+              transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1] }}
+            >
+              <motion.div
+                className="fixed top-0 left-0 right-0 h-1.5 bg-clay-blue z-[100] origin-left"
+                style={{ scaleX }}
+              />
+              <Background />
               
-              <div id="about">
-                <About />
-              </div>
-              
-              <div id="education">
-                <Education />
-              </div>
-              
-              <div id="certifications">
-                <Certifications />
-              </div>
-              
-              <div id="works">
-                <Projects />
-              </div>
-              
-              <div id="contact">
-                <Contact />
-              </div>
-            </main>
+              <main>
+                <div id="hero">
+                  <Hero />
+                </div>
+                
+                <div id="about">
+                  <About />
+                </div>
+                
+                <div id="education">
+                  <Education />
+                </div>
+                
+                <div id="certifications">
+                  <Certifications />
+                </div>
+                
+                <div id="works">
+                  <Projects />
+                </div>
+                
+                <div id="contact">
+                  <Contact />
+                </div>
+              </main>
 
-            <footer className="py-12 px-6 md:px-20 flex flex-col md:flex-row justify-between items-center gap-6">
-              <div className="text-xs font-bold uppercase tracking-widest text-slate-400">
-                © 2026 Annoula Veerendra Pal
-              </div>
-              <div className="text-xs font-bold uppercase tracking-widest text-slate-400">
-                Built with Clay & React
-              </div>
-              <div className="flex gap-6">
-                {[
-                  { name: 'LinkedIn', href: 'https://www.linkedin.com/in/veerendrapal' },
-                  { name: 'GitHub', href: 'https://github.com/Veerendrapal24' },
-                  { name: 'Email', href: 'mailto:veerendra2475@gmail.com' }
-                ].map((item) => (
-                  <Magnetic key={item.name}>
-                    <a 
-                      href={item.href} 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-clay-blue transition-colors"
-                    >
-                      {item.name}
-                    </a>
-                  </Magnetic>
-                ))}
-              </div>
-            </footer>
+              <footer className="py-12 px-6 md:px-20 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div className="text-xs font-bold uppercase tracking-widest text-slate-400">
+                  © 2026 Annoula Veerendra Pal
+                </div>
+                <div className="text-xs font-bold uppercase tracking-widest text-slate-400">
+                  Built with Clay & React
+                </div>
+                <div className="flex gap-6">
+                  {[
+                    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/veerendrapal' },
+                    { name: 'GitHub', href: 'https://github.com/Veerendrapal24' },
+                    { name: 'Email', href: 'mailto:veerendra2475@gmail.com' }
+                  ].map((item) => (
+                    <Magnetic key={item.name}>
+                      <a 
+                        href={item.href} 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-clay-blue transition-colors"
+                      >
+                        {item.name}
+                      </a>
+                    </Magnetic>
+                  ))}
+                </div>
+              </footer>
+            </motion.div>
             <BackToTop />
-          </motion.div>
+          </>
         )}
       </AnimatePresence>
     </div>

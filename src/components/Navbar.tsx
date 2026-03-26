@@ -54,7 +54,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="sticky top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-4xl mx-auto">
+    <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-4xl">
       <motion.div 
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
